@@ -30,7 +30,7 @@ body {
 .input {
     height: 40px;
     width: 100%;
-    max-width: 150px;
+    max-width: 100%; /* Adjust width to fit container */
     border-radius: 5px;
     background-color: #333; /* Darker background for inputs */
     border: 1px solid #444; /* Slightly lighter border */
@@ -127,4 +127,68 @@ h2 {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For devices with a max width of 600px (mobile phones) */
+@media (max-width: 600px) {
+    .container {
+        width: 95%; /* Make container width more fluid */
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .input {
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .contain {
+        font-size: 14px;
+    }
+
+    .result {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+/* For devices with a max width of 400px (smaller mobile phones) */
+@media (max-width: 400px) {
+    .container {
+        width: 100%; /* Full width for very small screens */
+    }
+
+    .input {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .contain {
+        font-size: 12px;
+    }
+
+    .result {
+        font-size: 14px;
+        padding: 6px;
+    }
 }
