@@ -30,7 +30,7 @@ body {
 .input {
     height: 40px;
     width: 100%;
-    max-width: 100%; /* Adjust width to fit container */
+    max-width: 150px;
     border-radius: 5px;
     background-color: #333; /* Darker background for inputs */
     border: 1px solid #444; /* Slightly lighter border */
@@ -142,6 +142,7 @@ h2 {
     .input {
         height: 35px;
         font-size: 14px;
+        max-width: 100%; /* Adjust width to fit container */
     }
 
     .btn {
@@ -172,6 +173,7 @@ h2 {
     .input {
         height: 30px;
         font-size: 12px;
+        max-width: 100%; /* Adjust width to fit container */
     }
 
     .btn {
