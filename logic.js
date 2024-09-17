@@ -21,7 +21,7 @@ function calc() {
     const totalCredits = 19; // Total credits for all subjects combined
 
     // Credits for each subject
-    const credits = [3, 4, 4, 1, 3, 1, 2, 1]; // Update based on your specific credit distribution
+    const credits = [3, 4, 4, 1, 3, 3, 1, 0]; // Update based on your specific credit distribution
 
     for (let i = 0; i < 8; i++) {
         a[i] = document.getElementById(i + 1).value;
