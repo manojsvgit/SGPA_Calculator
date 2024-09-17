@@ -33,7 +33,6 @@ To run the SGPA Calculator locally, follow these steps:
    ```bash
    git clone https://github.com/manojsvgit/sgpa-calculator.git
    
-
 2. **Navigate to the Project Directory:**
 
    ```bash
