@@ -14,8 +14,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function calc() {
-    const name = document.getElementById("name").value;
-    const usn = document.getElementById("usn").value;
     const a = [];
     const val = [];
     const b = [];
@@ -63,27 +61,4 @@ function calc() {
 
     let sgpa = totalWeightedPoints / totalCredits;
     document.getElementById("res").innerHTML = sgpa.toFixed(2);
-
-    // Prepare data to send to the backend
-    const sgpaData = {
-        name: name,
-        usn: usn,
-        sgpa: sgpa.toFixed(2)
-    };
-
-    // Send the data to the backend using fetch API
-    fetch('http://localhost:5000/api/save-sgpa', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(sgpaData)
-    })
-    .then(response => response.text())
-    .then(data => {
-        console.log(data);
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    });
 }
