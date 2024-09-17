@@ -37,5 +37,31 @@ To run the SGPA Calculator locally, follow these steps:
 
    ```bash
     cd sgpa-calculator
-   
+3. **Open index.html in Your Browser:**
+
+Simply open the index.html file in a web browser to view the SGPA Calculator.
+
+Explore the code and projects.
+## Usage
+1. Open the SGPA Calculator in Your Browser.
+2. Enter Marks for Each Subject.
+3. Click the "Calculate SGPA" Button.
+4. View Your SGPA Results
+
+## Contributing
+
+Contributions are welcome! If you have suggestions for improvements or find any issues, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+##Contact
+For any inquiries or questions, you can reach me at:
+
+GitHub Profile
+LinkedIn
+
 
