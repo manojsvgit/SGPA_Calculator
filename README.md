@@ -31,12 +31,12 @@ To run the SGPA Calculator locally, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/manojsvgit/sgpa-calculator.git
+   git clone https://github.com/manojsvgit/SGPA_Calculator.git
    
 2. **Navigate to the Project Directory:**
 
    ```bash
-    cd sgpa-calculator
+    cd SGPA_Calculator
 3. **Open "index.html" in Your Browser:**
 
     Simply open the index.html file in a web browser to view the SGPA Calculator.
