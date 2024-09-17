@@ -14,24 +14,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function calc() {
+    const name = document.getElementById("name").value;
+    const usn = document.getElementById("usn").value;
     const a = [];
     const val = [];
     const b = [];
     let totalWeightedPoints = 0;
-    const totalCredits = 19; // Total credits for all subjects combined (adjust if needed)
+    const totalCredits = 19; // Total credits for all subjects combined
 
-    // Updated credits array for all 9 subjects
     const credits = [3, 4, 4, 1, 3, 1, 2, 1, 0]; // Make sure these match the subjects
 
-    for (let i = 0; i < 9; i++) {  // Update loop to include 9 subjects
+    for (let i = 0; i < 9; i++) {  // Loop for 9 subjects
         a[i] = document.getElementById(i + 1).value;
 
-        // Validate input and convert to grade points
         if (a[i] === '' || isNaN(a[i])) {
             alert("Please enter valid marks for all subjects");
             return;
         }
-        
+
         a[i] = parseFloat(a[i]);
 
         if (a[i] > 100) {
@@ -39,7 +39,6 @@ function calc() {
             return;
         }
 
-        // Convert marks to grade points
         if (a[i] >= 90) {
             val[i] = 10;
         } else if (a[i] >= 80) {
@@ -58,12 +57,33 @@ function calc() {
             val[i] = 0;
         }
 
-        // Calculate weighted points based on credits
         b[i] = val[i] * credits[i];
         totalWeightedPoints += b[i];
     }
 
-    // Calculate SGPA
     let sgpa = totalWeightedPoints / totalCredits;
     document.getElementById("res").innerHTML = sgpa.toFixed(2);
+
+    // Prepare data to send to the backend
+    const sgpaData = {
+        name: name,
+        usn: usn,
+        sgpa: sgpa.toFixed(2)
+    };
+
+    // Send the data to the backend using fetch API
+    fetch('http://localhost:5000/api/save-sgpa', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(sgpaData)
+    })
+    .then(response => response.text())
+    .then(data => {
+        console.log(data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 }

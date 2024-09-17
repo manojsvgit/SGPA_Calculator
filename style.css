@@ -101,6 +101,33 @@ h2 {
     border-radius: 10px;
 }
 
+/* Name and USN Container */
+.name-usn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Adjust width to fit within the container */
+}
+
+.input-group label {
+    margin-bottom: 5px;
+}
+
+.name-group {
+    flex: 1;
+    margin-right: 10px; /* Space between name and USN fields */
+}
+
+.usn-group {
+    flex: 1;
+}
+
 /* Tooltip Styles */
 .tooltip {
     position: relative;
@@ -161,6 +188,11 @@ h2 {
     .result {
         font-size: 16px;
         padding: 8px;
+    }
+
+    /* Adjustments for smaller screens */
+    .name-usn-container {
+        flex-direction: column;
     }
 }
 
