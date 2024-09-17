@@ -18,12 +18,12 @@ function calc() {
     const val = [];
     const b = [];
     let totalWeightedPoints = 0;
-    const totalCredits = 19; // Total credits for all subjects combined
+    const totalCredits = 19; // Total credits for all subjects combined (adjust if needed)
 
-    // Credits for each subject
-    const credits = [3, 4, 4, 1, 3, 3, 1, 0]; // Update based on your specific credit distribution
+    // Updated credits array for all 9 subjects
+    const credits = [3, 4, 4, 1, 3, 1, 2, 1, 0]; // Make sure these match the subjects
 
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 9; i++) {  // Update loop to include 9 subjects
         a[i] = document.getElementById(i + 1).value;
 
         // Validate input and convert to grade points
